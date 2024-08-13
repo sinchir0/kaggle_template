@@ -1,3 +1,7 @@
+```
+pip install cookiecutter
+```
+
 以下を実行し、competition_nameなどを入力する。
 ```
 cookiecutter https://github.com/sinchir0/kaggle_template.git

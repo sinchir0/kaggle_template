@@ -13,8 +13,7 @@ ps aux | grep python
 
 ## Kill
 ```
-pkill multiple_run
-pkill runnb
+pkill multiple_run && pkill runnb
 ```
 
 ## git系

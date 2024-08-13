@@ -37,7 +37,7 @@ git pull origin main
 
 ```
 git add -u
-git config --global user.email "{{cookiecutter.github_email_address}}"
+git config --global user.email "{{cookiecutter.github_email}}"
 git commit -m "add"
 git push origin main
 ```

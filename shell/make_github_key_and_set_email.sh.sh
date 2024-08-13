@@ -5,4 +5,4 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 
-git config --global user.email {{cookiecutter.github_email_address}}
+git config --global user.email {{cookiecutter.github_email}}

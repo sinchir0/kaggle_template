@@ -31,7 +31,7 @@ git push origin main
 ### セッティング
 - kaggle.jsonをダウンロードする
   - https://www.kaggle.com/settings
-- kaggle.jsonを`kaggle_json`配下にアップロードする
+- kaggle.jsonを`env_file`配下にアップロードする
 - 適切なパスと権限を付与し、kaggleをinstallする
 ```
 ./shell/set_kaggle_api.sh

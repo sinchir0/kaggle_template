@@ -174,3 +174,7 @@ wheels/
 
 trained_model/
 data/
+
+# env_file
+env_file/kaggle.json
+env_file/env

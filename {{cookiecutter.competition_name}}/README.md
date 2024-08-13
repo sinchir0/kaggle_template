@@ -54,6 +54,7 @@ git push origin main
 ```
 
 以下のリンクで、New SSH Keyを行い、出力された公開鍵を登録する
+
 https://github.com/settings/keys
 
 

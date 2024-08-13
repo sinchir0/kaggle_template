@@ -1,8 +1,7 @@
 # {{cookiecutter.competition_name}}
 
-## バックグラウンドでの動作
+## バックグラウンドにて、直列の複数のノートブックを実行する
 ```
-cd {{cookiecutter.competition_name}}
 # あらかじめ、mutiple_run.sh内に実行したいnotebookを記載する
 nohup ./multiple_run.sh &
 ```
@@ -18,22 +17,7 @@ pkill multiple_run
 pkill runnb
 ```
 
-## GitHubからのpull
-```
-cd {{cookiecutter.competition_name}}
-./shell/make_github_key_and_set_email.sh.sh
-```
-
-```
-以下のリンクで、New SSH Keyを行う
-https://github.com/settings/keys
-```
-
-```
-git pull origin main
-```
-
-## git add, commit, push
+## git系
 
 ```
 git add -u
@@ -42,16 +26,12 @@ git commit -m "add"
 git push origin main
 ```
 
-## nbconvertで変換した際に、ログに残るかどうか
-- printで出力したものは残る
-- notebookの一番最後に実行し、Notebookの機能で出力したものは残らない
-
 ## コンペティションデータのダウンロード
 
 ### セッティング
 - kaggle.jsonをダウンロードする
   - https://www.kaggle.com/settings
-- kaggle.jsonをアップロードする
+- kaggle.jsonを`kaggle_json`配下にアップロードする
 - 適切なパスと権限を付与し、kaggleをinstallする
 ```
 ./shell/set_kaggle_api.sh
@@ -62,31 +42,30 @@ git push origin main
 ./shell/download_competition_data.sh
 ```
 
-## 環境設定
+## シェルの設定
 
-### zshのインストール
-```sh
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
-sudo apt install zsh
+```
+./shell/setting_shell.sh
 ```
 
-### starshipの設定
-```sh
-# https://starship.rs/ja-JP/guide/
-curl -sS https://starship.rs/install.sh | sh
-echo "$(starship init zsh)" >> ~/.zshrc
+## GitHubへのアクセス権限の設定
+```
+./shell/make_github_key_and_set_email.sh.sh
 ```
 
-### zsh-autosuggestionsの設定
-```sh
-# https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
-echo 'HISTFILE=~/.zsh_history' >> ~/.zshrc
-echo 'HISTSIZE=1000' >> ~/.zshrc
-echo 'SAVEHIST=1000' >> ~/.zshrc
-echo 'setopt HIST_IGNORE_DUPS' >> ~/.zshrc
-echo 'setopt SHARE_HISTORY' >> ~/.zshrc
-echo 'setopt INC_APPEND_HISTORY' >> ~/.zshrc
-echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
 ```
+以下のリンクで、New SSH Keyを行い、出力された公開鍵を登録する
+https://github.com/settings/keys
+```
+
+## 環境変数の設定
+```
+cp env_file/env.default env_file/env
+```
+- envファイルに対し、WANDB_API_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEYを設定する
+
+## 注意点
+
+### nbconvertで変換した際に、ログに残るかどうか
+- printで出力したものは残る
+- notebookの一番最後に実行し、Notebookの機能で出力したものは残らない

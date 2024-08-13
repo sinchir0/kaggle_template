@@ -1,6 +1,6 @@
 # {{cookiecutter.competition_name}}
 
-## バックグラウンドにて、直列の複数のノートブックを実行する
+## バックグラウンドにて、複数のノートブックを直列に実行する
 ```
 # あらかじめ、mutiple_run.sh内に実行したいnotebookを記載する
 nohup ./multiple_run.sh &

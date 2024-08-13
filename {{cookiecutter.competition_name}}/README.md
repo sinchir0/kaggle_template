@@ -53,18 +53,21 @@ git push origin main
 ./shell/make_github_key_and_set_email.sh.sh
 ```
 
-```
 以下のリンクで、New SSH Keyを行い、出力された公開鍵を登録する
 https://github.com/settings/keys
-```
+
 
 ## 環境変数の設定
 ```
 cp env_file/env.default env_file/env
 ```
-- envファイルに対し、WANDB_API_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEYを設定する
+envファイルに対し、WANDB_API_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEYを設定する
 
 ## 注意点
+
+### 仮想環境
+- 仮想環境はryeで管理する想定である。`rye sync`
+- ただし、GPU環境によっては既存の環境を利用した方が楽な場合があるため、利用しなくても良い。
 
 ### nbconvertで変換した際に、ログに残るかどうか
 - printで出力したものは残る

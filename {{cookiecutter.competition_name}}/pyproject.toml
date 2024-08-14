@@ -23,6 +23,9 @@ build-backend = "hatchling.build"
 managed = true
 dev-dependencies = []
 
+[tool.ruff]
+extend-include = ["*.ipynb"]
+
 [tool.hatch.metadata]
 allow-direct-references = true
 

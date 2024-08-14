@@ -173,7 +173,8 @@ wheels/
 .venv
 
 trained_model/
-data/
+data/*
+!data/.gitkeep
 
 # env_file
 env_file/kaggle.json

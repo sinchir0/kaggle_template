@@ -66,7 +66,7 @@ envファイルに対し、WANDB_API_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_K
 ## 注意点
 
 ### 仮想環境
-- 仮想環境はryeで管理する想定である。`rye sync`
+- 仮想環境はryeで管理する想定である。`rye pin 3.10.3`, `rye sync`など。
 - ただし、GPU環境によっては既存の環境を利用した方が楽な場合があるため、利用しなくても良い。
 
 ### nbconvertで変換した際に、ログに残るかどうか

@@ -59,7 +59,7 @@ https://github.com/settings/keys
 
 ## 環境変数の設定
 ```
-cp env_file/.env.default env_file/env
+cp env_file/.env.default env_file/.env
 ```
 envファイルに対し、WANDB_API_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEYを設定する
 

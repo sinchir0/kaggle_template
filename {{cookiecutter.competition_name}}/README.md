@@ -57,6 +57,14 @@ git push origin main
 https://github.com/settings/keys
 
 
+## GitHub上でのリポジトリの作成
+まずは、GitHub上で{{cookiecutter.competition_name}}という名前のrepoを作成する
+
+次に、ローカルのファイルをpushする。
+```
+./shell/git_first_push.sh
+```
+
 ## 環境変数の設定
 ```
 cp env_file/.env.default env_file/.env

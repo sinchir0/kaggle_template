@@ -3,7 +3,7 @@
 ## バックグラウンドにて、複数のノートブックを直列に実行する
 ```
 # あらかじめ、mutiple_run.sh内に実行したいnotebookを記載する
-nohup ./multiple_run.sh &
+nohup ./shell/multiple_run.sh &
 ```
 
 ## 動いているかの確認

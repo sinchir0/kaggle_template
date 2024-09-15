@@ -49,7 +49,7 @@ git push origin main
 
 ## GitHubへのアクセス権限の設定
 ```
-./shell/make_github_key_and_set_email.sh.sh
+./shell/make_github_key_and_set_email.sh
 ```
 
 以下のリンクで、New SSH Keyを行い、出力された公開鍵を登録する

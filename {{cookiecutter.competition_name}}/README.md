@@ -3,7 +3,7 @@
 ## バックグラウンドにて、複数のノートブックを直列に実行する
 ```
 # あらかじめ、mutiple_run.sh内に実行したいnotebookを記載する
-nohup ./multiple_run.sh &
+nohup ./shell/multiple_run.sh &
 ```
 
 ## 動いているかの確認
@@ -49,7 +49,7 @@ git push origin main
 
 ## GitHubへのアクセス権限の設定
 ```
-./shell/make_github_key_and_set_email.sh.sh
+./shell/make_github_key_and_set_email.sh
 ```
 
 以下のリンクで、New SSH Keyを行い、出力された公開鍵を登録する
@@ -57,16 +57,24 @@ git push origin main
 https://github.com/settings/keys
 
 
+## GitHub上でのリポジトリの作成
+まずは、GitHub上で{{cookiecutter.competition_name}}という名前のrepoを作成する
+
+次に、ローカルのファイルをpushする。
+```
+./shell/git_first_push.sh
+```
+
 ## 環境変数の設定
 ```
-cp env_file/env.default env_file/env
+cp env_file/.env.default env_file/.env
 ```
 envファイルに対し、WANDB_API_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEYを設定する
 
 ## 注意点
 
 ### 仮想環境
-- 仮想環境はryeで管理する想定である。`rye sync`
+- 仮想環境はryeで管理する想定である。`rye pin 3.10.3`, `rye sync`など。
 - ただし、GPU環境によっては既存の環境を利用した方が楽な場合があるため、利用しなくても良い。
 
 ### nbconvertで変換した際に、ログに残るかどうか

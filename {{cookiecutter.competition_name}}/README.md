@@ -1,5 +1,18 @@
 # {{cookiecutter.competition_name}}
 
+## VSCodeの拡張機能をインストール
+```
+python
+jupyter
+ruff(任意)
+GitHub Copilot(任意)
+```
+
+## 環境構築
+```
+pip install requirements.txt
+```
+
 ## バックグラウンドにて、複数のノートブックを直列に実行する
 ```
 # あらかじめ、mutiple_run.sh内に実行したいnotebookを記載する

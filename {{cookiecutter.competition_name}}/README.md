@@ -10,7 +10,7 @@ GitHub Copilot(任意)
 
 ## 環境構築
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## バックグラウンドにて、複数のノートブックを直列に実行する
